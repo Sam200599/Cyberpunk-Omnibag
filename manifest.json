@@ -1,14 +1,16 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 3,
   "name": "Cyberpunk Omnibag",
   "version": "1.0.0",
   "description": "Inventário avançado e gerador de loot para Cyberpunk RED.",
-  "icon": "/assets/icons/bag.svg",
+  "icons": {
+    "128": "/assets/icons/bag.svg"
+  },
   "action": {
-    "title": "Omnibag",
+    "title": "Cyberpunk Omnibag",
     "icon": "/assets/icons/bag.svg",
     "popover": "/index.html",
-    "width": 400,
-    "height": 600
+    "width": 430,
+    "height": 650
   }
 }
