@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Cyberpunk Omnibag",
+  "version": "1.0.0",
+  "description": "Inventário avançado, sistema de loot e gerenciamento completo de itens para Cyberpunk RED no Owlbear Rodeo 2.0.",
+  "icons": {
+    "128": "/assets/icons/bag.svg"
+  },
+  "action": {
+    "title": "Cyberpunk Omnibag",
+    "popover": "/index.html",
+    "width": 820,
+    "height": 720
+  },
+  "permissions": {
+    "scene": [
+      "list",
+      "read",
+      "write",
+      "onChange"
+    ],
+    "player": [
+      "list",
+      "read"
+    ],
+    "external": [
+      "asset"
+    ]
+  },
+  "homepage_url": "https://sam200599.github.io/Cyberpunk-Omnibag/"
+}
