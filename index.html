@@ -8,135 +8,40 @@
   <link rel="icon" href="/assets/icons/bag.svg" type="image/svg+xml" />
 </head>
 <body>
-  <div id="omnibag-root" class="omnibag">
-    <header class="omnibag-header">
-      <img src="/assets/icons/bag.svg" alt="" class="omnibag-logo" />
-      <div class="omnibag-title">
-        <h1>Cyberpunk Omnibag</h1>
-        <small>Inventário & Loot — Cyberpunk RED</small>
+  <div class="omnibag-root sidebar-layout">
+    <aside class="omnibag-side">
+      <div class="brand">
+        <img src="/assets/icons/bag.svg" alt="bag" />
+        <h1>Omnibag</h1>
       </div>
-      <div class="omnibag-actions">
-        <button id="btn-export" title="Exportar">Export</button>
-        <button id="btn-import" title="Importar">Import</button>
-        <input id="import-file" type="file" accept=".json" style="display:none;">
+      <nav class="side-nav">
+        <button class="side-btn active" data-panel="/panels/inventory.html">Inventário</button>
+        <button class="side-btn" data-panel="/panels/equipped.html">Equipados</button>
+        <button class="side-btn" data-panel="/panels/loot.html">Loot</button>
+        <button class="side-btn" data-panel="/panels/tables.html">Tabelas</button>
+        <button class="side-btn" data-panel="/panels/settings.html">Configurações</button>
+      </nav>
+      <div class="side-footer">
+        <small>Cyberpunk Omnibag<br/>v1.0.0</small>
       </div>
-    </header>
-    <nav class="omnibag-nav" role="tablist" aria-label="Navegação Omnibag">
-      <button class="tab active" data-tab="inventory" role="tab" aria-selected="true">Inventário</button>
-      <button class="tab" data-tab="equipped" role="tab">Equipados</button>
-      <button class="tab" data-tab="loot" role="tab">Loot</button>
-      <button class="tab" data-tab="tables" role="tab">Tabelas</button>
-      <button class="tab" data-tab="settings" role="tab">Configurações</button>
-    </nav>
+    </aside>
+
     <main class="omnibag-main">
-      <section id="tab-inventory" class="tab-panel" role="tabpanel">
-        <div class="panel-head">
-          <h2>Inventário</h2>
-          <div class="controls">
-            <select id="category-filter"></select>
-            <input id="search-input" placeholder="Buscar itens..." />
-            <button id="btn-new-bag">Criar Mochila</button>
-          </div>
+      <header class="main-header">
+        <div class="main-title"><h2 id="panel-title">Inventário</h2></div>
+        <div class="main-actions">
+          <button id="btn-export">Export</button>
+          <button id="btn-import">Import</button>
+          <input id="import-file" type="file" accept=".json" style="display:none" />
         </div>
-        <div class="inventory-content">
-          <aside class="inventory-left">
-            <div id="bags-list" class="bags-list"></div>
-          </aside>
-          <section class="inventory-right">
-            <div id="inventory-view-mode" class="view-mode">
-              <button data-mode="grid" class="vm active">Grade</button>
-              <button data-mode="list" class="vm">Lista</button>
-              <button data-mode="quick" class="vm">Consumíveis</button>
-            </div>
-            <div id="inventory-grid" class="item-grid"></div>
-            <div id="inventory-quick" class="item-quick hidden"></div>
-          </section>
-        </div>
-        <div id="item-editor" class="editor hidden">
-          <h3>Editar Item</h3>
-          <label>Nome <input id="edit-name" /></label>
-          <label>Descrição <textarea id="edit-desc"></textarea></label>
-          <label>Categoria <select id="edit-cat"></select></label>
-          <div class="editor-actions">
-            <button id="save-item">Salvar</button>
-            <button id="cancel-item">Cancelar</button>
-          </div>
-        </div>
-      </section>
-      <section id="tab-equipped" class="tab-panel hidden" role="tabpanel">
-        <div class="panel-head">
-          <h2>Equipados</h2>
-          <div class="equip-controls">
-            <label>Mãos do personagem:
-              <select id="character-hands">
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-            </label>
-          </div>
-        </div>
-        <div class="equipped-layout">
-          <div class="equip-slots">
-            <div class="slot" data-slot="head"><strong>Capacete</strong><div class="slot-body" id="slot-head"></div></div>
-            <div class="slot" data-slot="torso"><strong>Torso</strong><div class="slot-body" id="slot-torso"></div></div>
-            <div class="slot" data-slot="handswear"><strong>Mãos (vestível)</strong><div class="slot-body" id="slot-handswear"></div></div>
-            <div class="slot" data-slot="legs"><strong>Pernas</strong><div class="slot-body" id="slot-legs"></div></div>
-            <div class="slot" data-slot="boots"><strong>Botas</strong><div class="slot-body" id="slot-boots"></div></div>
-          </div>
-          <div class="equip-hands">
-            <h3>Em Mãos</h3>
-            <div id="hands-container" class="hands-container"></div>
-            <h4>Equipados Gerais</h4>
-            <div id="equipped-other" class="equipped-other"></div>
-          </div>
-        </div>
-      </section>
-      <section id="tab-loot" class="tab-panel hidden" role="tabpanel">
-        <div class="panel-head"><h2>Gerador de Loot</h2></div>
-        <div class="loot-body">
-          <div class="loot-controls">
-            <button id="btn-add-folder">Selecionar Pasta</button>
-            <label>Grupos <input id="loot-groups" type="number" value="1" min="1" /></label>
-            <button id="btn-preview">Pré-visualizar</button>
-            <button id="btn-generate">Gerar Loot</button>
-          </div>
-          <div id="loot-folders" class="loot-folders"></div>
-          <div id="loot-preview" class="loot-preview"></div>
-        </div>
-      </section>
-      <section id="tab-tables" class="tab-panel hidden" role="tabpanel">
-        <div class="panel-head">
-          <h2>Tabelas Aleatórias</h2>
-          <div class="table-actions"><button id="btn-new-table">Nova Tabela</button></div>
-        </div>
-        <div id="tables-list" class="tables-list"></div>
-        <div id="table-editor" class="table-editor hidden"></div>
-      </section>
-      <section id="tab-settings" class="tab-panel hidden" role="tabpanel">
-        <div class="panel-head"><h2>Configurações</h2></div>
-        <div class="settings-grid">
-          <div>
-            <h3>Backup</h3>
-            <button id="btn-export-json">Exportar JSON</button>
-            <button id="btn-export-zip">Exportar ZIP</button>
-            <input id="import-json-file" type="file" accept=".json,.zip" />
-          </div>
-          <div>
-            <h3>Permissões</h3>
-            <label><input type="checkbox" id="setting-allow-player-edit" /> Jogadores podem editar suas mochilas</label>
-            <label><input type="checkbox" id="setting-auto-stack" checked /> Empilhamento automático</label>
-          </div>
-          <div>
-            <h3>Sobre</h3>
-            <p>Cyberpunk Omnibag — versão <span id="omnibag-version">1.0.0</span></p>
-            <p><a href="https://sam200599.github.io/Cyberpunk-Omnibag/" target="_blank" rel="noreferrer">Página do projeto</a></p>
-          </div>
-        </div>
+      </header>
+
+      <section class="panel-container">
+        <iframe id="panel-iframe" src="/panels/inventory.html" frameborder="0"></iframe>
       </section>
     </main>
-    <footer class="omnibag-footer"><small>Feito por Samuel RPG & ChatGPT — Owlbear Rodeo 2.0</small></footer>
   </div>
+
   <script type="module" src="/js/main.js"></script>
 </body>
 </html>
