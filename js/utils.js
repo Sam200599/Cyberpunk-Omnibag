@@ -1,4 +1,0 @@
-export function randomRange(min,max){min=Math.floor(min);max=Math.floor(max);if(max<=min) return min;return Math.floor(Math.random()*(max-min+1))+min;}
-export function parseXdY(spec){if(!spec) return null;const m=String(spec).match(/(\d+)d(\d+)/i);if(!m) return null;return {n:Number(m[1]),d:Number(m[2])};}
-export function rollXdY(spec){if(!spec) return 0; if(typeof spec==='number') return spec; const p=parseXdY(spec); if(!p) return Number(spec)||0; let t=0; for(let i=0;i<p.n;i++) t+=randomRange(1,p.d); return t;}
-export function choiceWeighted(arr){ if(!arr||!arr.length) return null; if(typeof arr[0]!=='object') return arr[Math.floor(Math.random()*arr.length)]; let total=0; for(const a of arr) total+=Number(a.weight||1); let r=Math.random()*total; for(const a of arr){ if(r<Number(a.weight||1)) return a; r-=Number(a.weight||1);} return arr[arr.length-1]; }

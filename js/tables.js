@@ -1,1 +1,0 @@
-export function init(){ console.log("[Tables] init"); }

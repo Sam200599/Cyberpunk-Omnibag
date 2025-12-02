@@ -1,3 +1,0 @@
-:root { --cp-yellow: #f8ff19; --cp-cyan: #00eaff; --cp-bg: #0a0a0a; --cp-panel: #111; --cp-border: #2b2b2b; }
-body { margin:0; background:var(--cp-bg); color:white; font-family: monospace; }
-#omnibag-nav{display:flex;background:#000;border-bottom:2px solid var(--cp-yellow);}
