@@ -1,26 +1,6 @@
 
-:root{
-  --bg:#040406;
-  --panel:#0d0d10;
-  --accent:#00eaff;
-  --muted:#9aa3a8;
-  --glass: rgba(255,255,255,0.03);
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,UI-sans-serif,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#eaeaea}
+:root{--bg:#040406;--panel:#0d0d10;--accent:#00eaff;--muted:#9aa3a8;--glass: rgba(255,255,255,0.03);}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,UI-sans-serif,system-ui,Arial,Helvetica,sans-serif;background:var(--bg);color:#eaeaea}
 .omnibag-root{display:flex;height:680px;width:880px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,#070708, #050506)}
 .sidebar-layout .omnibag-side{width:200px;background:linear-gradient(180deg,#071018,#041014);padding:12px;display:flex;flex-direction:column;align-items:stretch;border-right:1px solid rgba(255,255,255,0.02)}
-.brand{display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.02);margin-bottom:8px}
-.brand img{width:36px;height:36px}
-.brand h1{font-size:16px;margin:0}
-.side-nav{display:flex;flex-direction:column;gap:6px;margin-top:10px}
-.side-btn{background:none;border:0;color:var(--accent);padding:10px 8px;text-align:left;border-radius:6px;cursor:pointer;font-size:14px}
-.side-btn:hover{background:rgba(0,234,255,0.05)}
-.side-btn.active{background:rgba(0,234,255,0.07);box-shadow:0 0 6px rgba(0,234,255,0.04)}
-.side-footer{margin-top:auto;padding-top:12px;color:var(--muted);font-size:12px;text-align:center}
-
-.omnibag-main{flex:1;display:flex;flex-direction:column}
-.main-header{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid rgba(255,255,255,0.03);background:var(--glass)}
-.panel-container{flex:1;display:block;padding:8px}
-.panel-container iframe{width:100%;height:100%;border-radius:6px;background:#000}
-button{font-family:inherit}
+.brand{display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.02);margin-bottom:8px}.brand img{width:36px;height:36px}.brand h1{font-size:16px;margin:0}.side-nav{display:flex;flex-direction:column;gap:6px;margin-top:10px}.side-btn{background:none;border:0;color:var(--accent);padding:10px 8px;text-align:left;border-radius:6px;cursor:pointer;font-size:14px}.side-btn:hover{background:rgba(0,234,255,0.05)}.side-btn.active{background:rgba(0,234,255,0.07);box-shadow:0 0 6px rgba(0,234,255,0.04)}.side-footer{margin-top:auto;padding-top:12px;color:var(--muted);font-size:12px;text-align:center}.omnibag-main{flex:1;display:flex;flex-direction:column}.main-header{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid rgba(255,255,255,0.03);background:var(--glass)}.panel-container{flex:1;display:block;padding:8px}.panel-container iframe{width:100%;height:100%;border-radius:6px;background:#000}button{font-family:inherit}
