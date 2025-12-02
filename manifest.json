@@ -8,24 +8,15 @@
   },
   "action": {
     "title": "Cyberpunk Omnibag",
+    "icon": "/assets/icons/bag.svg",
     "popover": "/index.html",
     "width": 820,
     "height": 720
   },
   "permissions": {
-    "scene": [
-      "list",
-      "read",
-      "write",
-      "onChange"
-    ],
-    "player": [
-      "list",
-      "read"
-    ],
-    "external": [
-      "asset"
-    ]
+    "scene": ["list", "read", "write", "onChange"],
+    "player": ["list", "read"],
+    "external": ["asset"]
   },
   "homepage_url": "https://sam200599.github.io/Cyberpunk-Omnibag/"
 }
