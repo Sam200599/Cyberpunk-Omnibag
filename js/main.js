@@ -1,0 +1,1 @@
+import * as Inventory from "./inventory.js"; import * as Tables from "./tables.js"; import * as Loot from "./loot.js"; window.addEventListener("DOMContentLoaded", async ()=>{ await Inventory.init(); Tables.init(); Loot.init(); console.log("Cyberpunk Omnibag loaded (packaged)."); });

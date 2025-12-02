@@ -1,0 +1,10 @@
+{
+  "id": "cyberpunk-omnibag",
+  "title": "Cyberpunk Omnibag",
+  "description": "Inventário avançado e gerador de loot para Cyberpunk RED",
+  "version": "1.0.0",
+  "author": "Samuel RPG & ChatGPT",
+  "entry": "index.html",
+  "icon": "/assets/icons/bag.svg",
+  "minOwlbearVersion": "2.0.0"
+}
