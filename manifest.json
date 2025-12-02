@@ -5,8 +5,8 @@
   "description": "Inventário avançado, loot automatizado e gerenciamento de itens para Cyberpunk RED no Owlbear Rodeo 2.0.",
   "action": {
     "title": "Cyberpunk Omnibag",
-    "icon": "assets/icons/bag.svg",
-    "popover": "index.html",
+    "icon": "assets/ui/bag.svg",
+    "popover": "https://sam200599.github.io/Cyberpunk-Omnibag/index.html",
     "width": 820,
     "height": 720
   },
