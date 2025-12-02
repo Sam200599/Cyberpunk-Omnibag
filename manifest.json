@@ -1,11 +1,14 @@
 {
-  "id": "cyberpunk-omnibag",
+  "manifest_version": 1,
   "name": "Cyberpunk Omnibag",
-  "title": "Cyberpunk Omnibag",
-  "description": "Inventário avançado e gerador de loot para Cyberpunk RED.",
   "version": "1.0.0",
-  "author": "Samuel RPG & ChatGPT",
-  "entry": "index.html",
+  "description": "Inventário avançado e gerador de loot para Cyberpunk RED.",
   "icon": "/assets/icons/bag.svg",
-  "minOwlbearVersion": "2.0.0"
+  "action": {
+    "title": "Omnibag",
+    "icon": "/assets/icons/bag.svg",
+    "popover": "/index.html",
+    "width": 400,
+    "height": 600
+  }
 }
