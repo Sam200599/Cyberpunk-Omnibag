@@ -1,9 +1,9 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
   "name": "Cyberpunk Omnibag",
   "version": "1.0.0",
   "title": "Cyberpunk Omnibag",
-  "description": "Extensão de inventário Cyberpunk - Omnibag (dual manifest for Owlbear 1.x and 2.x)",
+  "description": "Extensão de inventário Cyberpunk para Owlbear Rodeo 2.x",
   "authors": [
     {
       "name": "Samuel RPG",
@@ -11,18 +11,15 @@
     }
   ],
   "icon": "assets/img/bag.svg",
-  "action": {
-    "title": "Cyberpunk Omnibag",
-    "type": "panel",
-    "icon": "assets/img/bag.svg",
-    "url": "index.html",
-    "popover": "index.html",
-    "width": 900,
-    "height": 700
-  },
-  "tags": [
-    "inventory",
-    "cyberpunk",
-    "omnibag"
-  ]
+  "panels": [
+    {
+      "id": "cyberpunk-omnibag",
+      "icon": "assets/img/bag.svg",
+      "title": "Cyberpunk Omnibag",
+      "startUrl": "index.html",
+      "height": 700,
+      "width": 900
+    }
+  ],
+  "tags": ["inventory", "cyberpunk", "omnibag"]
 }
