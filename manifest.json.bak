@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Cyberpunk Omnibag",
+  "version": "1.3.0",
+  "description": "Invent\u00e1rio avan\u00e7ado, loot automatizado e gerenciamento de itens para Cyberpunk RED no Owlbear Rodeo 2.0.",
+  "action": {
+    "title": "Cyberpunk Omnibag",
+    "icon": "assets/ui/bag.svg",
+    "popover": "https://sam200599.github.io/Cyberpunk-Omnibag/index.html",
+    "width": 820,
+    "height": 720
+  },
+  "homepage_url": "https://sam200599.github.io/Cyberpunk-Omnibag/",
+  "permissions": {
+    "storage": true
+  }
+}
