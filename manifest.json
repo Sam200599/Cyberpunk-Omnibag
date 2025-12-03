@@ -3,12 +3,6 @@
   "name": "Cyberpunk Omnibag",
   "version": "1.0.0",
   "description": "Extensão de inventário Cyberpunk para Owlbear Rodeo 2.x",
-  "authors": [
-    {
-      "name": "Samuel RPG",
-      "url": "https://github.com/Sam200599"
-    }
-  ],
   "icon": "assets/img/bag.svg",
   "panels": [
     {
@@ -16,8 +10,8 @@
       "label": "Cyberpunk Omnibag",
       "icon": "assets/img/bag.svg",
       "startUrl": "index.html",
-      "height": 700,
-      "width": 900
+      "width": 900,
+      "height": 700
     }
   ],
   "tags": ["inventory", "cyberpunk", "omnibag"]
