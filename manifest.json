@@ -1,4 +1,5 @@
 {
+  "manifest_version": 1,
   "name": "Cyberpunk Omnibag",
   "version": "1.0.0",
   "title": "Cyberpunk Omnibag",
@@ -11,17 +12,12 @@
   ],
   "icon": "/assets/img/bag.svg",
   "action": {
-    "title": "Omnibag",
+    "title": "Cyberpunk Omnibag",
     "type": "panel",
     "icon": "/assets/img/bag.svg",
     "url": "/index.html",
     "width": 900,
     "height": 700
   },
-  "tags": [
-    "inventory",
-    "bag",
-    "omnibag",
-    "cyberpunk"
-  ]
+  "tags": ["inventory", "cyberpunk", "omnibag"]
 }
